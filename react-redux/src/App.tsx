@@ -40,7 +40,7 @@ function App() {
           </button>
         </div>
       </div>
-      
+      <hr />
     </div>
   );
 }
