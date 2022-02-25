@@ -1,10 +1,41 @@
 import React from 'react';
+import { RootState } from './redux/store'
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment, incrementByAmount } from './redux/counter'
 import './App.css';
 
-function App() {
+
+
+function App() { 
+  const count  = useSelector((state: RootState) => state.counter.count);
+  const dispatch = useDispatch(); //call action from the reducer
   return (
-    <div className="App">
-      hello
+    <div className='App'>
+      <h1>Redux</h1>
+      <div>
+        <button
+          className='btn'
+          aria-label="Increment value"
+          onClick={()=> dispatch(increment())}
+        >
+          Increment (+)
+        </button>
+        <span className='count'>{count}</span>
+        <button
+          className='btn'
+          aria-label="Decrement value"
+          onClick={()=> dispatch(decrement())}
+        >
+          Decrement (-)
+        </button>
+      </div>
+      <button
+          className='btnAmt'
+          aria-label="incrementByAmount"
+          onClick={()=> dispatch(incrementByAmount(20))}
+        >
+          Increment by 20
+        </button>
     </div>
   );
 }

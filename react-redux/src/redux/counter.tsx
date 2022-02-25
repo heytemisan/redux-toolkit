@@ -24,6 +24,13 @@ export const counterSlice = createSlice({
     },
 });
 
+// code can then be executed and other actions can be dispatched
+export const incrementAsync = (amount: number) => (dispatch: (arg0: { payload: number; type: string; }) => void) => {
+    setTimeout(() => {
+        dispatch(incrementByAmount(amount))
+    }, 1000)
+}
+
 // Action creators are generated for each case reducer function
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
