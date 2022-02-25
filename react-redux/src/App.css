@@ -10,6 +10,7 @@
 .app__container {
   display:flex;
   flex-direction: column;
+  margin-top: 42px;
 }
 
 h1 {
@@ -44,10 +45,9 @@ button:hover {
   border-radius: 12px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .app {
     width: 100%;
-    background: red;
   }
 
   .btn {
@@ -57,6 +57,13 @@ button:hover {
   }
 
   .count {
-    font-size: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px black;
+  }
+
+  button:hover {
+    background: gray;
+    border-radius: 12px;
   }
 }
