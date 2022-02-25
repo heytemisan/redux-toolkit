@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, incrementByAmount } from './redux/counter'
 import './App.css';
 
-
 function App() { 
   const count  = useSelector((state: RootState) => state.counter.count);
   const dispatch = useDispatch(); //call action from the reducer
