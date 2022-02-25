@@ -29,7 +29,6 @@ h1 {
   height: 20vh;
   margin: 0 50px 10px 50px;
   border: 4px solid rgba(0, 0, 0, 0.946);
-  font-weight: bold;
 }
 
 .btnAmt {
@@ -66,5 +65,5 @@ button:hover {
     background: gray;
     border-radius: 12px;
   }
-  
+
 }
