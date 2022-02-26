@@ -5,7 +5,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-    count: 0, //keep track of count
+    count: 0, //keep track of count initial state
 };
 
 export const counterSlice = createSlice({
